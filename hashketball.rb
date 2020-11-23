@@ -139,14 +139,14 @@ def num_points_scored(name)
 end
 
 def shoe_size(name)
-  game_hash.each do |key, value|
-    value[:players].each do |player_stats|
+  game_hash.each{ |key, value|
+    value[:players].each{ |player_stats|
       case name
       when player_stats[:player_name]
         return player_stats[:shoe]
       end
-    end
-  end
+    }
+  }
 end
 
 def team_colors(team)
