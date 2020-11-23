@@ -150,18 +150,18 @@ def shoe_size(name)
 end
 
 def team_colors(team)
-  game_hash.each do |key, value|
+  game_hash.each{ |key, value|
     if value[:team_name] == team
       return value[:colors]
     end
-  end
+  }
 end
 
 def team_names
   teams_array = Array.new
-  game_hash.each do |key, value|
+  game_hash.each { |key, value|
     teams_array << value[:team_name]
-  end
+  }
   return teams_array
 end
 
